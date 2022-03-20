@@ -1,5 +1,6 @@
-import { EvilIcons, Ionicons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as React from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { Icon } from 'native-base';
 import {
   getFocusedRouteNameFromRoute,
   NavigationProp,
@@ -7,16 +8,11 @@ import {
   useNavigation,
   useRoute,
 } from '@react-navigation/native';
-import { Icon, Pressable } from 'native-base';
-import * as React from 'react';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PressableWithScale from '../components/Pressables/PressableWithScale';
-import useColorScheme from '../hooks/useColorScheme';
-import { HomeScreen, ListScreen } from '../screens';
-import GraphScreen from '../screens/GraphScreen';
+import { HomeScreen, ListScreen, GraphScreen } from '../screens';
 import { RootStackParamList, RootTabParamList } from '../types/navigation';
-import { RootTabScreenProps } from '../types/screens';
 import BottomTabComponent from './components/BottomTabComponent';
-import TabIcon from './components/TabIcon';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 

@@ -1,8 +1,5 @@
 import { Box, Icon, IIconProps } from 'native-base';
-import {
-  ColorType,
-  SizeType,
-} from 'native-base/lib/typescript/components/types';
+import { SizeType } from 'native-base/lib/typescript/components/types';
 import { FC } from 'react';
 import PressableWithScale from '../../components/Pressables/PressableWithScale';
 

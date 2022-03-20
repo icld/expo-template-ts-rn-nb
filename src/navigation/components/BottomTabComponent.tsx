@@ -1,13 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
-import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
-import {
-  getFocusedRouteNameFromRoute,
-  NavigationProp,
-  RouteProp,
-  useNavigation,
-  useRoute,
-} from '@react-navigation/native';
-import { Flex, Heading, HStack, Icon, IIconProps, Text } from 'native-base';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
+import { Heading, HStack, Icon, IIconProps } from 'native-base';
 import PressableWithScale from '../../components/Pressables/PressableWithScale';
 import { RootStackParamList, RootTabParamList } from '../../types/navigation';
 
@@ -20,7 +13,8 @@ const BottomTabComponent: React.FC<BottomTabComponentProps> = ({
   currentRoute,
   routes,
 }) => {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const navigation =
+    useNavigation<NavigationProp<RootStackParamList & RootTabParamList>>();
 
   return (
     <HStack
