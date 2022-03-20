@@ -32,8 +32,11 @@ const BottomTabComponent: React.FC<BottomTabComponentProps> = ({
       borderTopColor='gray.200'
     >
       {routes ? (
-        routes.map((route) => (
-          <PressableWithScale onPress={() => navigation.navigate(route.name)}>
+        routes.map((route, i) => (
+          <PressableWithScale
+            onPress={() => navigation.navigate(route.name)}
+            key={route.name}
+          >
             <Icon
               w={6}
               as={Ionicons}
