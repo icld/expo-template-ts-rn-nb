@@ -1,6 +1,8 @@
 import { NavigatorScreenParams } from '@react-navigation/native';
-import { DrawerNavigatorParamList } from './DrawerNavigatorParamsList';
-import { TabNavigatorParamList } from './TabNavigatorParamList';
+import {
+  DrawerNavigatorParamList,
+  TabNavigatorParamList,
+} from '../../types/navigation';
 
 declare global {
   namespace ReactNavigation {

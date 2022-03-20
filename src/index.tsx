@@ -15,6 +15,7 @@ import {
 
 export default function App(): ReactElement {
   const colorScheme = useColorScheme();
+
   const [fontsLoaded] = useFonts({
     noto400: NotoSans_400Regular,
     noto400i: NotoSans_400Regular_Italic,

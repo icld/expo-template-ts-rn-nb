@@ -1,7 +1,8 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SearchScreen, NotFoundScreen } from '../screens';
-import { RootStackParamList } from '../types/types';
-import BottomTabNavigator from './BottomTabNavigator';
+import { SearchScreen, ErrorScreen } from '../../screens';
+import { RootStackParamList } from '../../types/navigation';
+import BottomTabNavigator from '../BottomTabNavigator/BottomTabNavigator';
+import { RootDrawerNavigator } from '../RootDrawerNavigator';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -14,12 +15,17 @@ export default function RootNavigator() {
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name='NotFound'
-        component={NotFoundScreen}
+        name='Drawer'
+        component={RootDrawerNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='Error'
+        component={ErrorScreen}
         options={{ title: 'Oops!' }}
       />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
-        <Stack.Screen name='Modal' component={SearchScreen} />
+        <Stack.Screen name='Search' component={SearchScreen} />
       </Stack.Group>
     </Stack.Navigator>
   );

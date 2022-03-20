@@ -1,6 +1,5 @@
-import RootNavigator from './RootNavigator';
-import BottomTabNavigator from './BottomTabNavigator';
+import RootNavigator from './RootNavigator/RootNavigator';
+import BottomTabNavigator from './BottomTabNavigator/BottomTabNavigator';
 import Navigation from './Navigation';
-import linkingConfig from './linkingConfig';
 
-export { RootNavigator, BottomTabNavigator, Navigation, linkingConfig };
+export { RootNavigator, BottomTabNavigator, Navigation };

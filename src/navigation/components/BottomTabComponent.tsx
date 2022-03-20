@@ -2,19 +2,19 @@ import { Ionicons } from '@expo/vector-icons';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { Heading, HStack, Icon, IIconProps } from 'native-base';
 import PressableWithScale from '../../components/Pressables/PressableWithScale';
-import { RootStackParamList, RootTabParamList } from '../../types/navigation';
+import {
+  RootStackParamList,
+  TabNavigatorParamList,
+} from '../../types/navigation';
 
-type BottomTabComponentProps = {
-  routes: { name: keyof RootTabParamList; iconName: IIconProps['name'] }[];
-  currentRoute: string | undefined;
-};
+import { BottomTabComponentProps } from '../BottomTabNavigator/types';
 
 const BottomTabComponent: React.FC<BottomTabComponentProps> = ({
   currentRoute,
   routes,
 }) => {
   const navigation =
-    useNavigation<NavigationProp<RootStackParamList & RootTabParamList>>();
+    useNavigation<NavigationProp<RootStackParamList & TabNavigatorParamList>>();
 
   return (
     <HStack
@@ -32,17 +32,17 @@ const BottomTabComponent: React.FC<BottomTabComponentProps> = ({
       borderTopColor='gray.200'
     >
       {routes ? (
-        routes.map((route, i) => (
+        routes.map(({ name, icon }) => (
           <PressableWithScale
-            onPress={() => navigation.navigate(route.name)}
-            key={route.name}
+            onPress={() => navigation.navigate(name)}
+            key={name}
           >
             <Icon
               w={6}
               as={Ionicons}
-              name={route.iconName}
+              name={icon}
               size='sm'
-              color={route.name === currentRoute ? 'rose.600' : 'gray.700'}
+              color={name === currentRoute ? 'rose.600' : 'gray.700'}
             />
           </PressableWithScale>
         ))

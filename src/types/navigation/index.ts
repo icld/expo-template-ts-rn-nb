@@ -1,4 +1,5 @@
 import { RootStackParamList } from './RootStackParamsList';
-import { RootTabParamList } from './RootTabParamList';
+import { TabNavigatorParamList } from './TabNavigatorParamList';
+import { DrawerNavigatorParamList } from './DrawerNavigatorParamsList';
 
-export { RootStackParamList, RootTabParamList };
+export { RootStackParamList, TabNavigatorParamList, DrawerNavigatorParamList };

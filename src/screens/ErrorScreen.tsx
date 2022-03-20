@@ -1,9 +1,9 @@
 import { Button, Text, View } from 'native-base';
-import { RootStackScreenProps } from '../types/types';
+import { RootStackScreenProps } from '../types/screens';
 
-export default function NotFoundScreen({
+export default function ErrorScreen({
   navigation,
-}: RootStackScreenProps<'NotFound'>) {
+}: RootStackScreenProps<'Error'>) {
   return (
     <View>
       <Text>This screen doesn't exist.</Text>

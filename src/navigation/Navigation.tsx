@@ -4,8 +4,7 @@ import {
   NavigationContainer,
 } from '@react-navigation/native';
 import { ColorSchemeName } from 'react-native';
-import linking from './linkingConfig';
-import RootNavigator from './RootNavigator';
+import { RootNavigator } from './RootNavigator';
 
 export default function Navigation({
   colorScheme,
@@ -14,7 +13,6 @@ export default function Navigation({
 }) {
   return (
     <NavigationContainer
-      linking={linking}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
     >
       <RootNavigator />
