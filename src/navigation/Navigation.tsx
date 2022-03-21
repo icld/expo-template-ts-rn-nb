@@ -4,7 +4,7 @@ import {
   NavigationContainer,
 } from '@react-navigation/native';
 import { ColorSchemeName } from 'react-native';
-import { RootNavigator } from './RootNavigator';
+import { DrawerNavigator } from './DrawerNavigator';
 
 export default function Navigation({
   colorScheme,
@@ -15,7 +15,7 @@ export default function Navigation({
     <NavigationContainer
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}
     >
-      <RootNavigator />
+      <DrawerNavigator />
     </NavigationContainer>
   );
 }

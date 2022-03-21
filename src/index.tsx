@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { useColorScheme } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Navigation } from './navigation';
+
 import AppLoading from 'expo-app-loading';
 import {
   NotoSans_400Regular,
@@ -12,6 +12,7 @@ import {
   NotoSans_700Bold_Italic,
   useFonts,
 } from '@expo-google-fonts/noto-sans';
+import Navigation from './navigation/Navigation';
 
 export default function App(): ReactElement {
   const colorScheme = useColorScheme();

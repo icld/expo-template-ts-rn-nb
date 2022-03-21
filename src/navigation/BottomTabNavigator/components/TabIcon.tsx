@@ -1,7 +1,7 @@
 import { Box, Icon, IIconProps } from 'native-base';
 import { SizeType } from 'native-base/lib/typescript/components/types';
 import { FC } from 'react';
-import PressableWithScale from '../../components/Pressables/PressableWithScale';
+import PressableWithScale from '../../../components/Pressables/PressableWithScale';
 
 type TabIconProps = {
   as: IIconProps['as'];
