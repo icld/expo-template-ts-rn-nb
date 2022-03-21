@@ -6,10 +6,10 @@ import {
   useRoute,
 } from '@react-navigation/native';
 import {
-  RootStackParamList,
+  RootDrawerParamList,
   TabNavigatorParamList,
 } from '../../types/navigation';
-import BottomTabComponent from '../components/BottomTabComponent';
+import BottomTabComponent from './components/BottomTabComponent';
 import baseTabScreenOptions from './baseTabScreenOptions';
 import TabRoutes from './tabRoutes';
 
@@ -17,12 +17,13 @@ export default function BottomTabNavigator() {
   const { Navigator, Screen } =
     createBottomTabNavigator<TabNavigatorParamList>();
   const { tabRoutes } = TabRoutes();
-  const route = useRoute<RouteProp<RootStackParamList>>();
+  const route = useRoute<RouteProp<RootDrawerParamList>>();
 
   const currentRoute = getFocusedRouteNameFromRoute(route);
 
   const routing = [tabRoutes.home, tabRoutes.list, tabRoutes.graph];
 
+  console.log(currentRoute, routing);
   return (
     <Navigator
       initialRouteName='Home'

@@ -1,6 +1,5 @@
 import baseTabScreenOptions from './baseTabScreenOptions';
 import BottomTabNavigator from './BottomTabNavigator';
-import tabRoutes from './tabRoutes';
-baseTabScreenOptions;
+import TabRoutes from './tabRoutes';
 
-export { BottomTabNavigator, tabRoutes, baseTabScreenOptions };
+export { BottomTabNavigator, TabRoutes, baseTabScreenOptions };

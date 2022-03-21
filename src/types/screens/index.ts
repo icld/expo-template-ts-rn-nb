@@ -1,4 +1,4 @@
-import { RootStackScreenProps } from './RootStackScreenProps';
+import { RootStackScreenProps } from './RootDrawerScreenProps';
 import { RootTabScreenProps } from './RootTabScreenProps';
 
 export { RootStackScreenProps, RootTabScreenProps };
